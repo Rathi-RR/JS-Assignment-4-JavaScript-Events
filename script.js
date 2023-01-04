@@ -26,6 +26,10 @@ var previewImg = document.createElement('div')
     }    
 rightCol.appendChild(previewImg)
 
+rightCol.innerHTML += `<div class="btn">
+<a href="#"><button id="btnCart">Add to Cart</button></a>
+</div>`
+
   
 // click function 
 
