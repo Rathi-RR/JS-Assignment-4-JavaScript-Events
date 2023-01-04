@@ -34,10 +34,16 @@ var getImg = document.getElementById('prod_image')
 
 for(var i=0; i<productData.photos.length; i++){
     var prevListsimg = document.getElementsByClassName('listsIMG')[i]
+    document.getElementsByClassName('listsIMG')[0].classList.add('active')
+    
     prevListsimg.addEventListener("click", function(){
-        // var current = document.getElementsByClassName("active");
-        // current[0].className = current[0].className.replace(" active", "");
-        //this.className += "active"
+        var actClass = document.getElementsByClassName("active");
+
+        if (actClass.length > 0) {
+            actClass[0].className = actClass[0].className.replace(" active", "");
+        }
+
+        this.className += " active";
       var result = this.src
       getImg.src = result;
 })
